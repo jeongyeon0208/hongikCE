@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="kr" class="" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>LS 2th Battery</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/"> -->
+
+    
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"> -->
+
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+    <link href="style.scss" rel="stylesheet">
+  </head>
+  <body class="d-flex text-bg-dark">
+    <section id="BG">
+      <video class="" muted autoplay loop>
+        <source src="./assets/source/2th_main.mp4" type="video/mp4">
+        <!-- <strong>Your browser does not support the video tag.</strong> -->
+      </video>
+      <div class="btnGroup">
+        <button type="button" onclick="popOver(0)" class="btn btn-secondary btn-popOver">
+          <i>
+            +
+          </i>
+          <p>
+            전극공정
+          </p>
+          <div class="discrip">
+            <span>전극 공정</span>은            
+              2차 전지의 전극인 양극,음극을 만드는 공정으로 원재료를 혼합하는 ‘믹싱 공정’을 시작으로, 혼합된 슬러리를 포일에 도포하고 건조하는 ‘코팅 공정’, 전극의 두께를 낮추는 ‘롤 프레싱 공정’, 전극을 잘라주는 ‘슬리팅 공정’, 마지막으로 전극에 탭을 만들어 주는 ‘노칭 공정’ 순으로 진행됩니다.
+          </div>
+        </button>
+        <button type="button" onclick="popOver(1)" class="btn btn-secondary btn-popOver">
+          <i>
+            +
+          </i>
+          <p>
+            조립공정
+          </p>
+          <div class="discrip">
+            <span>조립공정</span>은 전극공정을 통해 제조된 양극판/음극판에 분리막과 전해질을 더해 셀 형태(원통형, 각형, 파우치형 등)에 따라서 조립하는 공정입니다.
+          </div>
+        </button>
+        <button type="button" onclick="popOver(2)" class="btn btn-secondary btn-popOver">
+          <i>
+            +
+          </i>
+          <p>
+            활성화공정
+          </p>
+          <div class="discrip">
+            <span>활성화공정</span>은 충전과 방전을 반복하여 전지를 활성화하고 전지의 안정화 작업 후 결함 검사 등을 통해 안정성을 확인하는 공정입니다.
+          </div>  
+        </button>
+        <button type="button" onclick="popOver(3)" class="btn btn-secondary btn-popOver">
+          <i>
+            +
+          </i>
+          <p>
+            팩 공정
+          </p>
+          <div class="discrip">
+            <span>팩 공정</span>은 전극-조립-활성화 공정까지 마친 배터리셀들을 필요로 하는 차량의 모델에 맞게 모듈화하여 팩에 넣는 공정입니다.
+          </div>        
+        </button>
+      </div>
+    </section>
+    
+    
+    <h1 id="Title"><img src="./assets/source/title.png" alt=""></h1>
+    <section id="Contents">
+      <div class="GNB">
+        <!-- <h2>주요 레퍼런스</h2> -->
+        <div class="btnGroup">
+          <!-- Button trigger modal -->
+          <button onclick="modalOn()" type="button" class="btn btn-primary btn-main" data-bs-toggle="modal" data-bs-target="#ModalNum1">
+            Mixer
+          </button>
+          <button onclick="modalOn()" type="button" class="btn btn-primary btn-main" data-bs-toggle="modal" data-bs-target="#ModalNum2">
+            Roll to Roll
+          </button>
+          <button onclick="modalOn()" type="button" class="btn btn-primary btn-main" data-bs-toggle="modal" data-bs-target="#ModalNum3">
+            Flying Cutting
+          </button>
+          <button onclick="modalOn()" type="button" class="btn btn-primary btn-main" data-bs-toggle="modal" data-bs-target="#ModalNum4">
+            Rotary Cutting
+          </button>
+          <button onclick="modalOn()" type="button" class="btn btn-primary btn-main" data-bs-toggle="modal" data-bs-target="#ModalNum5">
+            Lamination & Stacking
+          </button>
+          <button onclick="modalOn()" type="button" class="btn btn-primary btn-main" data-bs-toggle="modal" data-bs-target="#ModalNum6">
+            Electric Vehicle
+          </button>
+          <button onclick="modalOn()" type="button" class="btn btn-primary btn-main" data-bs-toggle="modal" data-bs-target="#ModalNum7">
+            Digital Twin
+          </button>
+          <button onclick="modalOn()" type="button" class="btn btn-primary btn-main" data-bs-toggle="modal" data-bs-target="#ModalNum8">
+            Network Interface
+          </button>
+        </div>
+      </div>
+
+      
+
+      
+
+    </section>
+
+    <footer class="mt-auto text-white">
+      <p>
+        © 2024 LS ELECTRIC. All rights reserved.
+      </p>
+    </footer>
+
+
+    <!-- ModalNum1 -->
+    <div class="modal fade mainModal" id="ModalNum1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum1Label" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content noCarou">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalNum1Label"><span>Mixer</span></h1>
+          </div>
+          <div class="modal-body1">
+            전극공정에서 양극,음극, 활물질과 용매제를 섞어 슬러리를 제조하는 공정입니다.
+          </div>
+          <p>LS Solution</p>
+          <dl class="modal-body2">
+            <dt>
+              <span>◆</span>대형 믹서 기동을 위한 오토토크 부스트 기능 전용화
+            </dt>
+            <dt>
+              <span>◆</span>정밀한 동기 제어
+            </dt>
+            <dt>
+              <span>◆</span>교반기 내 부하 변동에 적합한 제어성능 제공
+            </dt>
+            
+          </dl>
+          <div class="modal-prodVid">
+            <video class="" muted autoplay loop>
+              <source src="./assets/source/2th_contents_01.mp4" type="video/mp4">
+              <!-- <strong>Your browser does not support the video tag.</strong> -->
+            </video>
+          </div>
+          <div id="ModalNum1_carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/source/productImg/prod1/1.png" alt="">
+              </div>
+            </div>
+            <!--<button onclick="carouControl()" class="carousel-control-prev" type="button" data-bs-target="#ModalNum1_carousel" data-bs-slide="prev">
+              <span onclick="carouControl()" class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button onclick="carouControl()" class="carousel-control-next" type="button" data-bs-target="#ModalNum1_carousel" data-bs-slide="next">
+              <span onclick="carouControl()" class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>-->
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <!-- ModalNum2 -->
+    <div class="modal fade mainModal" id="ModalNum2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum2Label" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalNum2Label"><span>Roll To Roll</span></h1>
+          </div>
+          <div class="modal-body1">
+            롤투롤 이란 모재를 회전롤에 감아 소정의 물질을 도포해서 새로운 기능을 부가하는 기술로 도포기, 슬리터 등의 다양한 장비에 사용됩니다.
+          </div>
+          <p>LS Solution</p>
+          <dl class="modal-body2">
+            <dt>
+              <span>◆</span> 설비 특성
+            </dt>
+            <dd>
+              <span>•</span>로드셀/포텍셜 미터 피드백을 통한 고속 텐션제어
+            </dd>
+            <dt>
+              <span>◆</span> 제어 특성
+            </dt>
+            <dd>
+              <span>•</span>제어주기: 4ms, EtherCAT 모션 제어 10축
+            </dd>
+            <dd>
+              <span>•</span>제어속도 : 50M/min, ±2N 장력 유지
+            </dd>
+          </dl>
+          <div class="modal-prodVid">
+            <video class="" muted autoplay loop>
+              <source src="./assets/source/2th_contents_02.mp4" type="video/mp4">
+              <!-- <strong>Your browser does not support the video tag.</strong> -->
+            </video>
+          </div>
+          <div id="ModalNum2_carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/source/productImg/prod2/1.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod2/2.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod2/3.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod2/4.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod2/5.png" alt="">
+              </div>
+            </div>
+            <button onclick="carouControl()" class="carousel-control-prev" type="button" data-bs-target="#ModalNum2_carousel" data-bs-slide="prev">
+              <span onclick="carouControl()" class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button onclick="carouControl()" class="carousel-control-next" type="button" data-bs-target="#ModalNum2_carousel" data-bs-slide="next">
+              <span onclick="carouControl()" class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <!-- ModalNum3 -->
+    <div class="modal fade mainModal" id="ModalNum3" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum3Label" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalNum3Label"><span>Flying Cutting</span></h1>
+          </div>
+          <div class="modal-body1">
+            롤투롤 공정등 연속적인 생산 라인에서 소재를 고속으로 정밀하게 자르는 장비입니다. 배터리 전극 및 분리막과 같은 재료들을 생산하는데 적용되고 있습니다. 
+          </div>
+          <p>LS Solution</p>
+          <dl class="modal-body2">
+            <dt>
+              <span>◆</span> 설비 특성
+            </dt>
+            <dd>
+              <span>•</span>Flying Shear 필름 속도 동기제어
+            </dd>
+            <dd>
+              <span>•</span>제품변경에 따른 CAM 프로파일 변경
+            </dd>
+            <dd>
+              <span>•</span>I-Mark 위치에 따른 보상제어(1mm이내)
+            </dd>
+            <dt>
+              <span>◆</span> 제어 특성
+            </dt>
+            <dd>
+              <span>•</span>제어주기: 4ms, EtherCAT 6축 모션 제어
+            </dd>
+            <dd>
+              <span>•</span>제어속도: 230 CPM (Capacity Per Minute)
+            </dd>
+          </dl>
+          <div class="modal-prodVid">
+            <video class="" muted autoplay loop>
+              <source src="./assets/source/2th_contents_03.mp4" type="video/mp4">
+              <!-- <strong>Your browser does not support the video tag.</strong> -->
+            </video>
+          </div>
+          <div id="ModalNum3_carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/source/productImg/prod3/1.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod3/2.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod3/3.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod3/4.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod3/5.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod3/6.png" alt="">
+              </div>
+            </div>
+            <button onclick="carouControl()" class="carousel-control-prev" type="button" data-bs-target="#ModalNum3_carousel" data-bs-slide="prev">
+              <span onclick="carouControl()" class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button onclick="carouControl()" class="carousel-control-next" type="button" data-bs-target="#ModalNum3_carousel" data-bs-slide="next">
+              <span onclick="carouControl()" class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <!-- ModalNum4 -->
+    <div class="modal fade mainModal" id="ModalNum4" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum4Label" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalNum4Label"><span>Rotary Cutting</span></h1>
+          </div>
+          <div class="modal-body1">
+            롤투롤 공정등 연속적인 생산 라인에서 소재를 고속으로 정밀하게 자르는 장비입니다. 배터리 전극 및 분리막과 같은 재료들을 생산하는데 적용되고 있습니다. 
+          </div>
+          <p>LS Solution</p>
+          <dl class="modal-body2">
+            <dt>
+              <span>◆</span> 설비 특성
+            </dt>
+            <dd>
+              <span>•</span>필름 재질 원단 장력제어
+            </dd>
+            <dd>
+              <span>•</span>제품 변경에 따른 CAM 프로파일 변경
+            </dd>
+            <dd>
+              <span>•</span>I-Mark 위치에 따른 보상제어
+            </dd>
+            <dt>
+              <span>◆</span> 제어 특성
+            </dt>
+            <dd>
+              <span>•</span>제어주기: 4ms, EtherCAT 7축 모션 제어
+            </dd>
+            <dd>
+              <span>•</span>제어속도: 100 ~ 200 CPM (Capacity Per Minute)
+            </dd>
+          </dl>
+          <div class="modal-prodVid">
+            <video class="" muted autoplay loop>
+              <source src="./assets/source/2th_contents_04.mp4" type="video/mp4">
+              <!-- <strong>Your browser does not support the video tag.</strong> -->
+            </video>
+          </div>
+          <div id="ModalNum4_carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/source/productImg/prod4/1.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod4/2.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod4/3.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod4/4.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod4/5.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod4/6.png" alt="">
+              </div>
+            </div>
+            <button onclick="carouControl()" class="carousel-control-prev" type="button" data-bs-target="#ModalNum4_carousel" data-bs-slide="prev">
+              <span onclick="carouControl()" class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button onclick="carouControl()" class="carousel-control-next" type="button" data-bs-target="#ModalNum4_carousel" data-bs-slide="next">
+              <span onclick="carouControl()" class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <!-- ModalNum5 -->
+    <div class="modal fade mainModal" id="ModalNum5" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum5Label" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content noCarou">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalNum5Label"><span>Lamination & Stacking</span></h1>
+          </div>
+          <div class="modal-body1">
+            셀과 분리막을 접지 않고 양극재, 음극재, 분리막이 합쳐진 개별 셀을 층층이 쌓아 올리는 방식으로 LG에너지솔루션 자체개발 공법입니다. 내부 공간 효울을 극대화함으로써 배터리 용량을 늘릴 수 있습니다.
+          </div>
+          <p>LS Solution</p>
+          <dl class="modal-body2 small">
+            <dt>
+              <span>◆</span> 설비 특성
+            </dt>
+            <dd>
+              <span>•</span>Feeder / Cutter / Linear 고속 CAM제어
+            </dd>
+            <dd>
+              <span>•</span>전극, 분리막 소재에 언와인더 장력제어
+            </dd>
+            <dd>
+              <span>•</span>Cell Tap 간격 보상제어
+            </dd>
+            <dt>
+              <span>◆</span> 제어 특성
+            </dt>
+            <dd>
+              <span>•</span>제어주기: 4ms, EtherCAT 7축 모션 제어
+            </dd>
+            <dd>
+              <span>•</span>제어속도: 390 mm/s, 220 CPM(3.6EA/1sec)
+            </dd>
+            <dd>
+              <span>•</span>정밀도 : ±0.04 mm (1mm이내)
+            </dd>
+          </dl>
+          <div class="modal-prodVid">
+            <video class="" muted autoplay loop>
+              <source src="./assets/source/2th_contents_05.mp4" type="video/mp4">
+              <!-- <strong>Your browser does not support the video tag.</strong> -->
+            </video>
+          </div>
+          <div id="ModalNum5_carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/source/productImg/prod5/1.png" alt="">
+              </div>
+            </div>
+            <!--<button onclick="carouControl()" class="carousel-control-prev" type="button" data-bs-target="#ModalNum5_carousel" data-bs-slide="prev">
+              <span onclick="carouControl()" class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button onclick="carouControl()" class="carousel-control-next" type="button" data-bs-target="#ModalNum5_carousel" data-bs-slide="next">
+              <span onclick="carouControl()" class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>-->
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <!-- ModalNum6 -->
+    <div class="modal fade mainModal" id="ModalNum6" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum6Label" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalNum6Label"><span>Electric Vehicle</span></h1>
+          </div>
+          <div class="modal-body1">
+            필요한 애플리케이션으로 모듈화하해 팩에 넣는 공정을 진행합니다.
+          </div>
+          <p>LS Solution</p>
+          <dl class="modal-body2">
+            <dt>
+              <span>◆</span> 설비 특성
+            </dt>
+            <dd>
+              <span>•</span>주변 장치(로봇, 비전, 용접기) Ethernet 통신
+            </dd>
+            <dd>
+              <span>•</span>모션 컨트롤러를 통한 다축 96축 서보 제어
+            </dd>
+            <dd>
+              <span>•</span>동기제어 (Gantary 장비 제어 알고리즘 적용)
+            </dd>
+            <dt>
+              <span>◆</span> 제어 특성
+            </dt>
+            <dd>
+              <span>•</span>제어주기: 4ms EtherCAT 96축 모션 제어
+            </dd>
+            <dd>
+              <span>•</span>Pack Module 1EA 15sec
+            </dd>
+          </dl>
+          <div class="modal-prodVid">
+            <video class="" muted autoplay loop>
+              <source src="./assets/source/2th_contents_06.mp4" type="video/mp4">
+              <!-- <strong>Your browser does not support the video tag.</strong> -->
+            </video>
+          </div>
+          <div id="ModalNum6_carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/source/productImg/prod6/1.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod6/2.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod6/3.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod6/4.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod6/5.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod6/6.png" alt="">
+              </div>
+            </div>
+            <button onclick="carouControl()" class="carousel-control-prev" type="button" data-bs-target="#ModalNum6_carousel" data-bs-slide="prev">
+              <span onclick="carouControl()" class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button onclick="carouControl()" class="carousel-control-next" type="button" data-bs-target="#ModalNum6_carousel" data-bs-slide="next">
+              <span onclick="carouControl()" class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <!-- ModalNum7 -->
+    <div class="modal fade mainModal" id="ModalNum7" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum7Label" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content num7th">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalNum7Label"><span>Digital Twin</span></h1>
+          </div>
+          <div class="modal-body1">
+            장비 구축 전 디지털  환경에서 시물레이션을 통해 공정, 장비, 그리고 시스템의 성능을 테스트하고 최적화하는 과정을 제공합니다. 
+          </div>
+          <p>LS Solution</p>
+          <dl class="modal-body2">
+            <dt>
+              <span>◆</span> SCARA Robot 실물장비 vs Digital Twin  비교검증
+            </dt>
+            <dt>
+              <span>◆</span> 가상 PLC 시물레이션 , 3rd Party  3D 시물레이터으로 실제 설비 투자전 사전 검증 구현<br>
+            ( Visual Component, Unity, NX-MCD)
+            </dt>
+            <dt>
+              <span>◆</span> TCO 절감, Risk Management, 설비 구축 기간 단축
+            </dt>
+          </dl>
+          <div class="modal-prodVid">
+            <video class="" muted autoplay loop>
+              <source src="./assets/source/2th_contents_07.mp4" type="video/mp4">
+              <!-- <strong>Your browser does not support the video tag.</strong> -->
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <!-- ModalNum8 -->
+    <div class="modal fade mainModal" id="ModalNum8" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum8Label" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalNum8Label"><span>Network Interface</span></h1>
+          </div>
+          <div class="modal-body1">
+            이차전지 제조 라인에서 다양한 인프라 설비, 공정 설비간의 네트워크 인터페이스를 지원합니다. 
+          </div>
+          <p>LS Solution</p>
+          <dl class="modal-body2 small">
+            <dt>
+              <span>◆</span> 시스템구성
+            </dt>
+            <dd>
+              <span>•</span>XGI-CPUZ 15 개
+            </dd>
+            <dd>
+              <span>•</span>XGL-EFMHB(이더넷 광1, 전기1) 2개
+            </dd>
+            <dd>
+              <span>•</span>XGL-EFMTB(이더넷 전기 2) 14개
+            </dd>
+            <dd>
+              <span>•</span>광케이블 100M 이상 (약 500M 적용)
+            </dd>
+            <dt>
+              <span>◆</span> 제어 특성
+            </dt>
+            <dd>
+              <span>•</span>설비(PLC)간 통신(5ms주기) 송/수신 2400/2400 word기준 ±38.6ms 검증
+            </dd>
+          </dl>
+          <div class="modal-prodVid">
+            <video class="" muted autoplay loop>
+              <source src="./assets/source/2th_contents_08.mp4" type="video/mp4">
+              <!-- <strong>Your browser does not support the video tag.</strong> -->
+            </video>
+          </div>
+          <div id="ModalNum8_carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/source/productImg/prod8/1.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod8/2.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod8/3.png" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/source/productImg/prod8/4.png" alt="">
+              </div>
+            </div>
+            <button onclick="carouControl()" class="carousel-control-prev" type="button" data-bs-target="#ModalNum8_carousel" data-bs-slide="prev">
+              <span onclick="carouControl()" class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button onclick="carouControl()" class="carousel-control-next" type="button" data-bs-target="#ModalNum8_carousel" data-bs-slide="next">
+              <span onclick="carouControl()" class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    
+    <!-- Button trigger modal -->
+<button onclick="modalOn()" type="button" class="btn btn-info btn-main btn-float" data-bs-toggle="modal" data-bs-target="#ModalNum9">
+  PRESS
+</button>
+
+
+ <!-- ModalNum9 -->
+ <div class="modal fade mainModal" id="ModalNum9" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalNum9Label" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen press">
+    <div class="modal-content num8th">
+        <img src="./assets/source/battery.jpeg" alt="">
+    </div>
+  </div>
+
+  <button type="button" class="closer btn-close" onclick="modalOn()" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+
+<button id="fullScreenBtn" onclick="fullScreen()" class="btn">
+  Full
+</button>
+    
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/dist/js/popper.min.js"></script>
+<script>
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
+  window.onload = function() {
+    //document.documentElement.requestFullscreen();
+  }
+
+  function fullScreen(){
+    document.documentElement.requestFullscreen();
+  }
+
+  const intervalID = setInterval(checkUser, 1000);
+  var noUserTime = 0;
+  console.log()
+  function checkUser(){
+    
+    noUserTime++;
+    //console.log(noUserTime);
+    if(noUserTime > 180){
+      location.reload();
+    }
+  }
+
+
+  function carouControl(){
+    noUserTime = 0;
+  }
+
+
+  // MODAL-CONTROL ////////////////////////////////
+  var currentState = 0;
+  var currentBtn = document.getElementsByClassName("btn-main");
+  var modals = document.getElementsByClassName("modal");
+  var menu = document.getElementById("Contents");
+  var title = document.getElementById("Title");
+  var isMenuOpen = 1;
+
+  var CarouInner = document.getElementsByClassName("carousel-inner");
+
+  function modalOn(){
+    noUserTime = 0;
+    for (i = 0; i < btnPopOverLen; i++){
+      btnPopOver[i].classList.remove("active");
+    }
+
+    for (i = 0; i < CarouInner.length; i++){
+      for (j = 0; j < CarouInner[i].getElementsByClassName("carousel-item").length; j++){
+        CarouInner[i].getElementsByClassName("carousel-item")[j].classList.remove("active");
+      }
+      CarouInner[i].getElementsByClassName("carousel-item")[0].classList.add("active");
+      console.log("reset!");
+    }
+
+    //hideMenu
+    if(menu.classList.contains("active")){
+      menu.classList.remove("active");
+      title.classList.remove("active");
+      for (i = 0; i < 9; i++){
+        modals[i].classList.remove("show");
+        document.getElementsByClassName("modal-backdrop")[0].classList.remove("show");
+      }
+    }else{
+      menu.classList.add("active");
+      title.classList.add("active");
+    }
+  }
+  // POPOVER ////////////////////////////////
+  var btnPopOver = document.getElementsByClassName("btn-popOver");
+  var btnPopOverLen = btnPopOver.length;
+  //
+  // var contentsPopOVer = document.getElementsByClassName("popover");
+  // var popOverLen = 0;
+  // console.log(btnPopOverLen);
+  // console.log(contentsPopOVer.length);
+  
+  var prevValue = null;
+
+  function popOver(n){
+    contentsPopOVer = document.getElementsByClassName("popover");
+
+    if(prevValue == n){ // 이전과 같은 버튼 눌럿을때
+      btnPopOver[n].classList.remove("active");
+      prevValue = null;
+    }else{ // 버튼 눌렀을때
+      // reset btn States
+      for (i = 0; i < btnPopOverLen; i++){
+        btnPopOver[i].classList.remove("active");
+      }
+      btnPopOver[n].classList.add("active");
+      prevValue = n; 
+    }
+    //console.log("worked!");
+  }
+</script>
+
+    </body>
+</html>
